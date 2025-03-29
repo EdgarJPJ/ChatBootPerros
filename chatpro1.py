@@ -9,7 +9,7 @@ import re
 app = FastAPI()
 
 # Servir archivos estáticos (JS, CSS)
-app.mount("/static", StaticFiles(directory="static"), name="static")
+app.mount("/statics", StaticFiles(directory="statics"), name="statics")
 
 # Configurar plantillas HTML
 templates = Jinja2Templates(directory="template")
@@ -113,7 +113,7 @@ info_detallada = {
     "Cuidado del pelaje": "Pelaje doble que requiere cepillado 2-3 veces por semana y diario en épocas de muda (primavera/otoño). No rasurar en verano pues el subpelo protege de calor y rayos UV. Baños ocasionales para no eliminar aceites naturales."
 }
 
-# Añadir los nodos al grafo con información detallada
+
 for origen, destino in [
     # Categoría principal
     ("Perros", "Salud"), 
